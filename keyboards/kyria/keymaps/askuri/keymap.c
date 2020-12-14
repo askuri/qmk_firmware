@@ -67,25 +67,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        |      |      | Alt  | Lower| Raise|  | Lower| Raise|      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-    // original
-    /*[_QWERTY] = LAYOUT(
-      LT(_RAISE, KC_ESC),       KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_PIPE,
-      MT(MOD_LCTL, KC_BSPC),   KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-      KC_LSFT,                 KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_LSFT,   KC_LSFT, KC_LSFT, KC_LSFT, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
-              KC_LGUI, KC_DEL, MT(MOD_LALT, KC_ENT), LT(_LOWER, KC_SPC), LT(_RAISE, KC_ESC), LT(_LOWER, KC_ENT), LT(_RAISE, KC_SPC), KC_TAB,  KC_BSPC, KC_RALT
-    ),*/
-    // vor rearrangement der daumen und mods
-    /*[_QWERTY] = LAYOUT(
-      KC_TAB,     KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                                                                             DE_Z,       KC_U,       KC_I,       KC_O,       KC_P,       KC_LBRC,
-      KC_BSPC,    KC_A,       KC_S,       KC_D,       KC_F,       KC_G,                                                                             KC_H,       KC_J,       KC_K,       KC_L,       KC_SCLN,    KC_QUOT,
-      _______,    DE_Y,       KC_X,       KC_C,       KC_V,       KC_B,            KC_LSFT,   KC_LSFT,              KC_LSFT,            KC_LSFT,    KC_N,       KC_M,       KC_COMM,    KC_DOT,     KC_MINS,    KC_EQL,
-                                          KC_LALT,    KC_DEL,     LSFT_T(KC_CAPS), TT(2),     LT(1,KC_ESC),         LT(1,KC_ENT),   LT(2,KC_SPC),   KC_RSFT,    KC_RCTL,    OSM(MOD_LCTL|MOD_LSFT)
-    ),*/
     [_QWERTY] = LAYOUT(
       KC_SPC ,    KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                                                                             DE_Z,       KC_U,       KC_I,       KC_O,       KC_P,       DE_UE,
       KC_BSPC,    KC_A,       KC_S,       KC_D,       KC_F,       KC_G,                                                                             KC_H,       KC_J,       KC_K,       KC_L,       DE_AE,      DE_OE,
       KC_DEL ,    DE_Y,       KC_X,       KC_C,       KC_V,       KC_B,            _______,   _______,              TT(_NUMBLOCK),    MC_OWL ,      KC_N,       KC_M,       DE_COMM,    DE_DOT,     DE_MINS,    DE_SS,
-                                     LALT_T(KC_CAPS), LCTL_T(KC_DEL), LSFT_T(KC_ENT), TT(2), LT(1,KC_ESC),          LT(1,KC_TAB),     LT(2,KC_SPC), RSFT_T(KC_BSPC), KC_RCTL, KC_RGUI
+                                     LALT_T(KC_CAPS), LCTL_T(KC_DEL), LSFT_T(KC_ENT), TT(_RAISE), LT(_LOWER,KC_ESC), LT(_LOWER,KC_TAB),     LT(_RAISE,KC_SPC), RSFT_T(KC_BSPC), KC_RCTL, KC_RGUI
     ),
 /*
  * Lower Layer: Symbols
@@ -148,7 +134,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, _______, RGB_SAD, RGB_HUD, RGB_VAD, RGB_RMOD,_______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),*/
-// todo
     [_ADJUST] = LAYOUT(
       _______, _______, _______, DM_REC2, DM_PLY2, _______,                                     _______, _______, _______, _______, _______, _______,
       _______, _______, MC_MFG , DM_REC1, DM_PLY1, DM_RSTP,                                     _______, _______, _______, _______, _______, _______,
