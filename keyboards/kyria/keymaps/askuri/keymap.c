@@ -57,20 +57,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Base Layer: QWERTY
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * | Space  |   Q  |   W  |   E  |   R  |   T  |                              |   Z  |   U  |   I  |   O  |   P  |  Ü     |
+ * | Tab    |   Q  |   W  |   E  |   R  |   T  |                              |   Z  |   U  |   I  |   O  |   P  |  Ü     |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * | Bkspc  |   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  |   Ö  |  Ä     |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | DEL    |   Y  |   X  |   C  |   V  |   B  |      |      |  | Num  | Owl  |   N  |   M  | ,  ; | .  : | -  _ |  ß  ?  |
+ * | Space  |   Y  |   X  |   C  |   V  |   B  |      |      |  | Num  | Owl  |   N  |   M  | ,  ; | .  : | -  _ |  ß  ?  |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        | ALT  | Ctrl | Shift| Raise| Lower|  | Lower| Raise| Shift| Ctrl | GUI  |
  *                        | CAPS | Del  | Enter|      | Esc  |  | Tab  | Space| Bkspc|      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_QWERTY] = LAYOUT(
-      KC_SPC ,    KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                                                                             DE_Z,       KC_U,       KC_I,       KC_O,       KC_P,       DE_UE,
+      KC_TAB ,    KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                                                                             DE_Z,       KC_U,       KC_I,       KC_O,       KC_P,       DE_UE,
       KC_BSPC,    KC_A,       KC_S,       KC_D,       KC_F,       KC_G,                                                                             KC_H,       KC_J,       KC_K,       KC_L,       DE_AE,      DE_OE,
-      KC_DEL ,    DE_Y,       KC_X,       KC_C,       KC_V,       KC_B,            _______,   _______,              TT(_NUMBLOCK),    MC_OWL ,      KC_N,       KC_M,       DE_COMM,    DE_DOT,     DE_MINS,    DE_SS,
+      KC_SPC ,    DE_Y,       KC_X,       KC_C,       KC_V,       KC_B,            _______,   _______,              TT(_NUMBLOCK),    MC_OWL ,      KC_N,       KC_M,       DE_COMM,    DE_DOT,     DE_MINS,    DE_SS,
                                      LALT_T(KC_CAPS), LCTL_T(KC_DEL), LSFT_T(KC_ENT), TT(_RAISE), LT(_LOWER,KC_ESC), LT(_LOWER,KC_TAB), LT(_RAISE,KC_SPC), RSFT_T(KC_BSPC), KC_RCTL, KC_RGUI
     ),
 /*
