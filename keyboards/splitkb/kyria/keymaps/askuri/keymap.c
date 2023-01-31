@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
-#include "keymap_german.h" // https://github.com/qmk/qmk_firmware/blob/c6850bad74ccec3cec0af1c74eb20b139d0ca481/quantum/keymap_extras/keymap_german.h
+#include "keymap_german.h" // https://github.com/qmk/qmk_firmware/blob/50d4dfd2e65904234d7ee138b57eccd4b6664e1f/quantum/keymap_extras/keymap_german.h
 #include "sendstring_german.h"
 
 enum layers {
@@ -78,8 +78,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_QWERTY] = LAYOUT(
-      KC_TAB , KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                     DE_Z,    KC_U,    KC_I,    KC_O,    KC_P,    DE_UE,
-      KC_BSPC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                                     KC_H,    KC_J,    KC_K,    KC_L,    DE_OE,   DE_AE,
+      KC_TAB , KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                     DE_Z,    KC_U,    KC_I,    KC_O,    KC_P,    DE_UDIA,
+      KC_BSPC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                                     KC_H,    KC_J,    KC_K,    KC_L,    DE_ADIA, DE_ODIA,
       KC_SPC , DE_Y,    KC_X,    KC_C,    KC_V,    KC_B, _______, _______,TT(_NUM), MC_OWL , KC_N,    KC_M,    DE_COMM, DE_DOT,  DE_MINS, DE_SS,
                              ALT_CAPS, CTL_DEL, SFT_ENT,TT_RAISE, LOW_ESC, LOW_TAB, RSE_SPC, SFT_BSPC,KC_RCTL, KC_LGUI
     ),
@@ -99,8 +99,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_LOWER] = LAYOUT(
       _______, DE_AT  , DE_ASTR, DE_LCBR, DE_RCBR, DE_PIPE,                                     DE_HASH, DE_EQL , DE_SLSH, DE_DLR , DE_PERC, _______,
-      _______, DE_LESS, DE_MORE, DE_LPRN, DE_RPRN, DE_PLUS,                                     DE_QST , DE_EXLM, DE_DQOT, DE_QUOT, DE_AMPR, DE_EURO,
-      _______, DE_PARA, DE_BSLS, DE_LBRC, DE_RBRC, DE_GRV , _______, _______, _______, _______, DE_TILD, DE_CIRC, _______, _______, _______, _______,
+      _______, DE_LABK, DE_RABK, DE_LPRN, DE_RPRN, DE_PLUS,                                     DE_QUES, DE_EXLM, DE_DQUO, DE_QUOT, DE_AMPR, DE_EURO,
+      _______, DE_SECT, DE_BSLS, DE_LBRC, DE_RBRC, DE_GRV , _______, _______, _______, _______, DE_TILD, DE_CIRC, _______, _______, _______, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 /*
@@ -202,6 +202,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
  * kyria zeug, dass ich nicht brauche
  */
+
+/*
 layer_state_t layer_state_set_user(layer_state_t state) {
     return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
 }
@@ -294,3 +296,4 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     }
 }
 #endif
+*/
