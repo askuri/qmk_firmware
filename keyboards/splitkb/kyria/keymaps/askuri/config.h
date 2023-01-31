@@ -27,9 +27,5 @@
   #define RGBLIGHT_VAL_STEP 8
 #endif
 
-// If you are using an Elite C rev3 on the slave side, uncomment the lines below:
-#define SPLIT_USB_DETECT
-#define NO_USB_STARTUP_CHECK
-
 // 5 taps on TT keys is too much for me
 #define TAPPING_TOGGLE 3
