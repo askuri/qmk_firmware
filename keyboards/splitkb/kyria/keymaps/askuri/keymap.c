@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
     [_QWERTY] = LAYOUT(
       KC_TAB , KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                     DE_Z,    KC_U,    KC_I,    KC_O,    KC_P,    DE_UDIA,
-      KC_BSPC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                                     KC_H,    KC_J,    KC_K,    KC_L,    DE_ADIA, DE_ODIA,
+      KC_BSPC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                                     KC_H,    KC_J,    KC_K,    KC_L,    DE_ODIA, DE_ADIA,
       KC_SPC , DE_Y,    KC_X,    KC_C,    KC_V,    KC_B, _______, _______,TT(_NUM), MC_OWL , KC_N,    KC_M,    DE_COMM, DE_DOT,  DE_MINS, DE_SS,
                              ALT_CAPS, CTL_DEL, SFT_ENT,TT_RAISE, LOW_ESC, LOW_TAB, RSE_SPC, SFT_BSPC,KC_RCTL, KC_LGUI
     ),
