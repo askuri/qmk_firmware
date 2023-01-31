@@ -73,8 +73,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  * | Space  |   Y  |   X  |   C  |   V  |   B  |      |      |  | Num  | Owl  |   N  |   M  | ,  ; | .  : | -  _ |  ß  ?  |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        | ALT  | Ctrl | Shift| Raise| Lower|  | Lower| Raise| Shift| Ctrl | GUI  |
- *                        | CAPS | Del  | Enter|      | Esc  |  | Tab  | Space| Bkspc|      |      |
+ *                        | Alt  | Ctrl | Shift| Raise| Lower|  | Lower| Raise| Shift| Ctrl | GUI  |
+ *                        | Caps | Del  | Enter|      | Esc  |  | Tab  | Space| Bkspc|      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_QWERTZ] = LAYOUT(
@@ -83,6 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_SPC , DE_Y,    KC_X,    KC_C,    KC_V,    KC_B, _______, _______,TT(_NUM), MC_OWL , KC_N,    KC_M,    DE_COMM, DE_DOT,  DE_MINS, DE_SS,
                              ALT_CAPS, CTL_DEL, SFT_ENT,TT_RAISE, LOW_ESC, LOW_TAB, RSE_SPC, SFT_BSPC,KC_RCTL, KC_LGUI
     ),
+
 /*
  * Lower Layer: Symbols
  *
@@ -103,6 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, DE_SECT, DE_BSLS, DE_LBRC, DE_RBRC, DE_GRV , _______, _______, _______, _______, DE_TILD, DE_CIRC, _______, _______, _______, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
+
 /*
  * Raise Layer: Number keys, Navigation, F-keys
  *
@@ -123,13 +125,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______, _______, _______, _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
+
 /*
- * Adjust Layer: Function keys, RGB
+ * Adjust Layer: Multimedia, Macros
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |      |      |      |      |      |                              |      |      |      |      |      |        |
+ * |        |      |      | Rec1 | Ply1 |      |                              |      |      | Mute |      |      |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |                              |      |      |      |      |      |        |
+ * |        |      | Mfg  | Rec1 | Ply1 | Stop |                              |      | Play | VolD | VolU | Next |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  * |        |      |      |      |      |      |                              |      |      |      |      |      |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
@@ -137,13 +140,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-/*
-    [_ADJUST] = LAYOUT(
-      _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                                       KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
-      _______, RGB_TOG, RGB_SAI, RGB_HUI, RGB_VAI, RGB_MOD,                                     _______, _______, _______, KC_F11,  KC_F12,  _______,
-      _______, _______, RGB_SAD, RGB_HUD, RGB_VAD, RGB_RMOD,_______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-                                 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
-    ),*/
+
     [_ADJUST] = LAYOUT(
       _______, _______, _______, DM_REC2, DM_PLY2, _______,                                     _______, _______, KC_MUTE, _______, _______, _______,
       _______, _______, MC_MFG , DM_REC1, DM_PLY1, DM_RSTP,                                     _______, KC_MPLY, KC_VOLD, KC_VOLU, KC_MNXT, _______,
