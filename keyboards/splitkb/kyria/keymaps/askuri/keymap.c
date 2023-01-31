@@ -18,7 +18,7 @@
 #include "sendstring_german.h"
 
 enum layers {
-    _QWERTY = 0,
+    _QWERTZ = 0,
     _LOWER,
     _RAISE,
     _ADJUST,
@@ -64,7 +64,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /*
- * Base Layer: QWERTY
+ * Base Layer: QWERTZ
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
  * | Tab    |   Q  |   W  |   E  |   R  |   T  |                              |   Z  |   U  |   I  |   O  |   P  |  Ü     |
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        | CAPS | Del  | Enter|      | Esc  |  | Tab  | Space| Bkspc|      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-    [_QWERTY] = LAYOUT(
+    [_QWERTZ] = LAYOUT(
       KC_TAB , KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                     DE_Z,    KC_U,    KC_I,    KC_O,    KC_P,    DE_UDIA,
       KC_BSPC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                                     KC_H,    KC_J,    KC_K,    KC_L,    DE_ODIA, DE_ADIA,
       KC_SPC , DE_Y,    KC_X,    KC_C,    KC_V,    KC_B, _______, _______,TT(_NUM), MC_OWL , KC_N,    KC_M,    DE_COMM, DE_DOT,  DE_MINS, DE_SS,
@@ -244,7 +244,7 @@ static void render_status(void) {
     // Host Keyboard Layer Status
     oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state)) {
-        case _QWERTY:
+        case _QWERTZ:
             oled_write_P(PSTR("Default\n"), false);
             break;
         case _LOWER:
