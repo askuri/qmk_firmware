@@ -31,20 +31,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 
 enum custom_keycodes {
-    MC_MFG = SAFE_RANGE,
     MC_OWL,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-    case MC_MFG:
-        if (record->event.pressed) {
-            // when keycode MC_MFG is pressed
-            SEND_STRING("Mit freundlichem Gruss,\nMartin Weber");
-        } else {
-            // when keycode MC_MFG is released
-        }
-        break;
     case MC_OWL:
         if (record->event.pressed) {
             // ctrl shift Space for owl
@@ -137,7 +128,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-------------------------------------------.                              ,-------------------------------------------.
  * |        |      |      | Rec1 | Ply1 |      |                              |      |      | Mute |      |      |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |      | Mfg  | Rec1 | Ply1 | Stop |                              |      | Play | VolD | VolU | Next |        |
+ * |        |      |      | Rec1 | Ply1 | Stop |                              |      | Play | VolD | VolU | Next |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  * |        |      |      |      |      |      |                              |      |      |      |      |      |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
@@ -148,7 +139,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_ADJUST] = LAYOUT(
       _______, _______, _______, DM_REC2, DM_PLY2, _______,                                     _______, _______, KC_MUTE, _______, _______, _______,
-      _______, _______, MC_MFG , DM_REC1, DM_PLY1, DM_RSTP,                                     _______, KC_MPLY, KC_VOLD, KC_VOLU, KC_MNXT, _______,
+      _______, _______, _______, DM_REC1, DM_PLY1, DM_RSTP,                                     _______, KC_MPLY, KC_VOLD, KC_VOLU, KC_MNXT, _______,
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
