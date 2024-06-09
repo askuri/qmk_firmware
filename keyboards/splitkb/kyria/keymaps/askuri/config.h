@@ -26,6 +26,3 @@
   #define RGBLIGHT_SAT_STEP 8
   #define RGBLIGHT_VAL_STEP 8
 #endif
-
-// 5 taps on TT keys is too much for me
-#define TAPPING_TOGGLE 3

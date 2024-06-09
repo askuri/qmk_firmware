@@ -60,7 +60,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #define ALT_CAPS LALT_T(KC_CAPS)
 #define CTL_DEL LCTL_T(KC_DEL)
 #define SFT_ENT LSFT_T(KC_ENT)
-#define TT_RAISE TT(_RAISE)
+#define MO_RAISE MO(_RAISE)
 #define LOW_ESC LT(_LOWER,KC_ESC)
 #define LOW_TAB LT(_LOWER,KC_TAB)
 #define RSE_SPC LT(_RAISE,KC_SPC)
@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB , KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                     DE_Z,    KC_U,    KC_I,    KC_O,    KC_P,    DE_UDIA,
       KC_BSPC, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                                     KC_H,    KC_J,    KC_K,    KC_L,    DE_ODIA, DE_ADIA,
       KC_SPC , DE_Y,    KC_X,    KC_C,    KC_V,    KC_B, _______, _______,TT(_NUM), MC_OWL , KC_N,    KC_M,    DE_COMM, DE_DOT,  DE_MINS, DE_SS,
-                             ALT_CAPS, CTL_DEL, SFT_ENT,TT_RAISE, LOW_ESC, LOW_TAB, RSE_SPC, SFT_BSPC,KC_RCTL, KC_LGUI
+                             ALT_CAPS, CTL_DEL, SFT_ENT,MO_RAISE, LOW_ESC, LOW_TAB, RSE_SPC, SFT_BSPC,KC_RCTL, KC_LGUI
     ),
 
 /*
